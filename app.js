@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
                             temperatureDegree.textContent = Math.floor(celsius)
                         }
                     })
-                }).catch(e => console.error("couldn't fetch the data from the server because " + e.message))
+                })
         })
     }
 
