@@ -50,3 +50,18 @@ body{
     margin-bottom: 20px;
     font-size: 30px;
 }
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.144);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(0, 62, 177);
+}
