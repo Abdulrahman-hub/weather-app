@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude
             lat = position.coords.latitude
-            const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=e778fe1f14e2789dbaff97f765f1d7a2`
+            const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=e778fe1f14e2789dbaff97f765f1d7a2`
 
             fetch(api)
                 .then(responsse => {
