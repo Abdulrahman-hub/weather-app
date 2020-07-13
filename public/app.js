@@ -14,30 +14,25 @@ window.addEventListener('load', () => {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude
             lat = position.coords.latitude
-            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=e778fe1f14e2789dbaff97f765f1d7a2`
 
-            fetch(api)
+            fetch(`/api?lat=${lat}&long=${long}`)
                 .then(responsse => {
                     return responsse.json()
                 })
                 .then(data => {
-                    /*
-                    store the needed data
-                    */
-                    const { temp } = data.main                   // the temperature in Kelvin
-                    const celsius = temp - 273.15                // the temperature in celsius
-                    const fahrenheit = temp * 9 / 5 - 459.67     // the temperature in fahrenheit
-                    const { description, id } = data.weather[0]
-                    const { country } = data.sys
+                    // the temperature in celsius
+                    const celsius = data.temperature - 273.15
+                    // the temperature in fahrenheit
+                    const fahrenheit = data.temperature * 9 / 5 - 459.67
                     /*
                     set dom elements from the api
                     */
                     temperatureDegree.textContent = Math.floor(celsius)
                     degreeIcon.classList.add('wi-celsius')
-                    temperatureDescription.textContent = description
-                    locationTimezone.textContent = country
+                    temperatureDescription.textContent = data.description
+                    locationTimezone.textContent = data.country
                     // add the appropiate class to the <i> to display the icon
-                    weatherIcon.classList.add(`wi-owm-${id}`)
+                    weatherIcon.classList.add(`wi-owm-${data.id}`)
                     degreeSection.addEventListener('click', () => {
                         let isFahrenheit = toggleDegree()
                         if (isFahrenheit) {
@@ -47,6 +42,7 @@ window.addEventListener('load', () => {
                         }
                     })
                 })
+
         })
     }
 
