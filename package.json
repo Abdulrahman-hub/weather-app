@@ -1,0 +1,26 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This project was cearted following this [YOUTUBE tutorial](https://youtu.be/wPElVpR1rwA) but with different [API](https://openweathermap.org/api) and [icons](https://erikflowers.github.io/weather-icons/).",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdulrahman-hub/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdulrahman-hub/weather-app/issues"
+  },
+  "homepage": "https://github.com/Abdulrahman-hub/weather-app#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
