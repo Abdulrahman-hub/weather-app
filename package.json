@@ -4,8 +4,8 @@
   "description": "This project was cearted following this [YOUTUBE tutorial](https://youtu.be/wPElVpR1rwA) but with different [API](https://openweathermap.org/api) and [icons](https://erikflowers.github.io/weather-icons/).",
   "main": "main.js",
   "scripts": {
-    "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "start": "node main.js",
+    "devStart": "nodemon main.js"
   },
   "repository": {
     "type": "git",
